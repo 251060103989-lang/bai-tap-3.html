@@ -1,0 +1,116 @@
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 1. Liên kết "Chuyển đến nội dung chính" (Yêu cầu 3) */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 2. Thanh điều hướng dùng Flexbox (Yêu cầu 4, 7) */
+.main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #333;
+    padding: 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #007bff;
+}
+
+/* Tiêu đề trang */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+/* 3. Mô hình hộp cho hình ảnh (Yêu cầu 5) */
+img {
+    border: 3px solid #444;
+    padding: 8px;
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 4. Hiệu ứng Hover cho ảnh (Yêu cầu 8) */
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. Thuộc tính Grid cho phần tử chứa từ 2 cột trở lên (Yêu cầu 6) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột */
+    gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 6. Bộ chọn nth-child (Yêu cầu 9) */
+.grid-container img:nth-child(odd) {
+    border-color: #007bff;
+    border-radius: 20px 0 20px 0;
+}
+
+.grid-container img:nth-child(even) {
+    border-color: #28a745;
+    border-radius: 0 20px 0 20px;
+}
+
+/* Nội dung căn giữa cơ bản */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 40px;
+}
